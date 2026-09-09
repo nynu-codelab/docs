@@ -50,4 +50,4 @@
 ## 下一步
 
 - 视觉基础：[computer-vision.md](computer-vision.md)
-- 项目流程：[handbook](https://github.com/nynu-codelab/handbook) 项目篇与企业合作篇
+- 项目流程：[工程流程总览](../engineering/overview.md)
