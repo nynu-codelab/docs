@@ -2,15 +2,17 @@
 
 Issue 是 CodeLab 的任务与问题入口。写好 Issue = 沟通清楚。
 
-## 三种模板
+## 五种模板
 
 组织已配置统一模板，创建 Issue 时选择：
 
 | 模板 | 用在哪里 |
 | --- | --- |
-| Bug Report | 报 Bug |
-| Feature Request | 提新功能 |
-| Project Task | 项目开发任务 |
+| Bug Report | 报缺陷 |
+| Feature Request | 提新功能或改进建议 |
+| Project Task | 拆解和跟踪项目开发任务 |
+| Documentation | 新增或修正技术文档 |
+| Technical Debt | 记录影响可维护性、安全性或交付效率的技术债 |
 
 ## 写 Issue 的原则
 
@@ -27,6 +29,7 @@ Issue 是 CodeLab 的任务与问题入口。写好 Issue = 沟通清楚。
 - `enhancement`：新功能
 - `task`：开发任务
 - `documentation`：文档
+- `technical debt`：技术债
 - `good first issue`：适合新人的任务（新人优先找这个）
 
 ## 认领任务
