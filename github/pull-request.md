@@ -40,6 +40,7 @@ Code Review
 
 - 由 Reviewer 或作者在通过后合并
 - 合并前确认：CI 通过、Review 通过、无未解决的对话
+- `codelab-admin` 成员可以合并自己的 PR，但必须通过全部必需 CI，并在 PR 中写明自审结论
 - 合并后删除分支（GitHub 会提示）
 
 ## 下一步
