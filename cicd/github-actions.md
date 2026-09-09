@@ -34,7 +34,7 @@ jobs:
 ## CodeLab 的用法
 
 - 新项目直接用 [templates](https://github.com/nynu-codelab/templates) 自带的 `ci.yml`，改一改即可
-- 公共工作流放在 [.github 仓库](https://github.com/nynu-codelab/.github/tree/main/workflows)，支持复用的部分抽出来
+- 公共工作流放在 [.github 仓库](https://github.com/nynu-codelab/.github/tree/main/.github/workflows)，支持复用的部分抽出来
 - 不要在 workflow 里写死密钥，用 **Secrets**：
 
 ```yaml

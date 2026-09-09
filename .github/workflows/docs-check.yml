@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run markdownlint-cli2
-        run: npx --yes markdownlint-cli2 "**/*.md"
+        run: npx --yes markdownlint-cli2@0.23.2 "**/*.md"
 
   pr-title:
     name: Check PR Title

@@ -53,6 +53,7 @@ CodeLab 组织下的仓库如何创建、命名和管理。
 - 所有变更必须通过 Pull Request。
 - 至少一位 Reviewer 批准，新的 Push 会使旧批准失效。
 - 所有 Review 对话解决后才能合并。
+- `codelab-admin` 成员可通过 Pull Request bypass 合并自己的 PR，但不能绕过必需状态检查。
 - 禁止强制推送和删除默认分支。
 - 文档仓库和模板仓库要求 `Markdown Lint`、`Check PR Title` 检查通过。
 - 代码项目按技术栈配置 Lint、Test、Build 或安全扫描检查。
