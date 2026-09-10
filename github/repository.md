@@ -13,7 +13,7 @@ CodeLab 组织下的仓库如何创建、命名和管理。
 1. 在 [templates](https://github.com/nynu-codelab/templates) 找到对应模板
 2. 使用 **Use this template** 创建新仓库（自动继承 README、.gitignore、CI 等）
 3. 仓库归属选择 `nynu-codelab`
-4. 由项目负责人或 `codelab-admin` 创建，并设置团队权限
+4. 由项目负责人或 `codelab-admin` 创建，并按 [repository-setup.md](repository-setup.md) 配置权限
 
 > 不要从零 `git init` 搭建：模板已经内置统一规范。
 
@@ -34,17 +34,18 @@ CodeLab 组织下的仓库如何创建、命名和管理。
 
 ## 团队权限
 
-| 团队 | 职责 |
-| --- | --- |
-| `codelab-admin` | 组织管理、仓库创建、权限 |
-| `software` | 软件研发部 |
-| `algorithm` | 算法研发部 |
-| `hardware` | 硬件研发部 |
-| `achievement` | 成果中心 |
+组织只维护三个 team：
 
-项目仓库一般按部门给团队 `Write` 权限。
+| Team | 职责 |
+| --- | --- |
+| `codelab-admin` | 组织管理、仓库创建、权限与分支保护（组织负责人 + 全栈组长） |
+| `software` | 全体研发，所有代码仓库的默认读写权限 |
+| `achievement` | 成果中心：成果归档、竞赛、论文、专利、软著与企业合作 |
+
+项目仓库默认给 `software` Write、`codelab-admin` Maintain；工作边界（哪个仓库必须谁批准）写在该仓库的 `CODEOWNERS` 中，不按部门预设子组。完整步骤见 [repository-setup.md](repository-setup.md)。
 
 ## 下一步
 
+- 新仓库权限配置：[repository-setup.md](repository-setup.md)
 - Issue 怎么写：[issue.md](issue.md)
 - PR 流程：[pull-request.md](pull-request.md)
