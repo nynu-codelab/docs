@@ -1,47 +1,39 @@
 # CodeLab Docs
 
-CodeLab 技术文档中心，面向本科生，回答“CodeLab 项目应该怎么做”。
+本仓库只放两类文档：**codelab-admin 怎么维护项目**、**software（软件研发）怎么协作提 PR**。技术栈教程按需查，不作为入门必读。
 
-## Overview
+## 我是 codelab-admin → 项目维护
 
-本文档覆盖开发全流程所需知识：Git / GitHub 协作、工程流程（技术方案、测试、发布、安全）、Docker、CI/CD、各技术栈实践、AI 与硬件方向。所有内容以实践为主，直接对应实验室项目的真实用法，不写教科书式长文。
+| 文档 | 内容 |
+| --- | --- |
+| [新仓库四步配置](github/repository-setup.md) | 建仓库、加 team、CODEOWNERS、分支保护 |
+| [仓库命名与权限模型](github/repository.md) | 三 team 模型、可见性、默认分支保护 |
+| [工程安全基线](engineering/security.md) | 密钥、CI、依赖安全；泄露事件响应 |
+| [项目与技术资产交接](engineering/handover.md) | 人员变动时仓库、权限、密钥怎么交 |
 
-## Structure
+## 我是 software 开发者 → 怎么协作
 
-```text
-docs/
-├── git/          # Git 基础、分支模型、Commit 规范
-├── github/       # 仓库、Issue、PR、Code Review 规范
-├── engineering/  # 工程流程：技术方案、测试、发布、交接、安全
-├── docker/       # Docker、Dockerfile、docker-compose
-├── cicd/         # CI/CD 与 GitHub Actions
-├── software/     # Java / Python / TypeScript 实践
-├── ai/           # AI / Agent / RAG
-├── algorithm/    # 算法、计算机视觉、工业视觉
-└── hardware/     # 树莓派、嵌入式、无人机
-```
+| 文档 | 内容 |
+| --- | --- |
+| [Git 概述](git/overview.md) / [分支模型](git/branching.md) / [Commit 规范](git/commit-convention.md) | 日常 Git |
+| [Issue 规范](github/issue.md) | 怎么写 Issue |
+| [PR 流程](github/pull-request.md) | 怎么提 PR |
+| [Code Review](github/code-review.md) | 怎么审、怎么被审 |
+| [工程流程总览](engineering/overview.md) | 需求 → 发布全流程 |
+| [技术方案与 ADR](engineering/technical-design.md) | 什么时候写设计文档 |
+| [测试与提测](engineering/testing.md) | 提测准入 |
+| [发布与回滚](engineering/release.md) | 版本、发布、回滚 |
+| [技术文档规范](engineering/documentation.md) | README、设计文档怎么写 |
 
-## 工程流程
+## 技术参考（按需查）
 
-- [工程流程总览](engineering/overview.md)
-- [技术方案与 ADR](engineering/technical-design.md)
-- [测试与提测](engineering/testing.md)
-- [发布与回滚](engineering/release.md)
-- [项目与技术资产交接](engineering/handover.md)
-- [技术文档规范](engineering/documentation.md)
-- [工程安全基线](engineering/security.md)
+- 语言规范：[Java](software/java.md)、[Python](software/python.md)、[TypeScript](software/typescript.md)
+- [Docker 概述](docker/overview.md) · [Dockerfile](docker/dockerfile.md) · [Compose](docker/docker-compose.md)
+- [CI/CD 概述](cicd/overview.md) · [GitHub Actions](cicd/github-actions.md)
 
-## Usage
+## 制度在哪
 
-- 新手从 [git/overview.md](git/overview.md) 开始
-- 写代码前阅读对应技术栈文档（如 [software/java.md](software/java.md)）
-- 用 Docker 时阅读 [docker/overview.md](docker/overview.md)
-- 提 PR 前阅读 [github/pull-request.md](github/pull-request.md)
-- 需求到发布全流程看 [工程流程总览](engineering/overview.md)
-
-## Contributing
-
-欢迎补充与修正。提交方式见 [.github/CONTRIBUTING.md](https://github.com/nynu-codelab/.github/blob/main/CONTRIBUTING.md)。
+组织架构、入组退出、考勤、奖惩、成果署名与保密制度在飞书 CodeLab 成员手册；本仓库不复制，只写 GitHub 上的技术操作。
 
 ## License
 
