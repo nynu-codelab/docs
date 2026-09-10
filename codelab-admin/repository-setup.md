@@ -2,7 +2,7 @@
 
 新仓库创建后，按以下四步完成权限与保护配置。
 
-**总原则**：新仓库 = `software`(Write) + `codelab-admin`(Maintain) + CODEOWNERS 划审批线 + main 分支保护，四件事齐了就能跑。
+**总原则**：新仓库 = `software`(Write) + `codelab-admin`(Maintain) + CODEOWNERS（codelab-admin 审批线）+ main 分支保护，四件事齐了就能跑。
 
 ## 前置：创建仓库
 
@@ -21,20 +21,15 @@ Settings → Collaborators and teams：
 
 ## 2. 根目录 CODEOWNERS
 
+**审批线统一为 `codelab-admin`**：任何 PR 改动任何路径，都必须由 `codelab-admin` 团队成员批准，其他团队不能批准合并。
+
 ```text
-# 默认：业务代码由研发团队审批
-* @nynu-codelab/software
+# 默认：所有改动由 codelab-admin（维护团队）批准
+* @nynu-codelab/codelab-admin
 
-# 部署与 CI：由 codelab-admin（运维负责人）把关
-/.github/workflows/ @nynu-codelab/codelab-admin
-/deploy/             @nynu-codelab/codelab-admin
-
-# 测试资产：由 codelab-admin（测试负责人）把关
-/tests/              @nynu-codelab/codelab-admin
-/test-data/          @nynu-codelab/codelab-admin
+# 如需让某子目录由专人把关，追加路径行并指向具体 GitHub 用户名
+# CODEOWNERS 只认 GitHub login，不写中文名
 ```
-
-当前运维与测试负责人由 `codelab-admin` 兼任；专职负责人到位后，对应行替换为具体 GitHub 用户名——CODEOWNERS 只认 GitHub login，不写中文名。
 
 ## 3. 分支保护
 
@@ -42,6 +37,7 @@ Settings → Branches → Add rule，针对 `main`：
 
 - ☑ Require a pull request before merging
 - ☑ Require approvals = **1**
+- ☑ **Require review from Code Owners（审批人 = CODEOWNERS 中的 codelab-admin）**
 - ☑ Require status checks to pass（填上 CI workflow 名）
 - ☑ Do not allow bypassing the above settings
 
@@ -52,6 +48,7 @@ Settings → Branches → Add rule，针对 `main`：
 - **不直接给个人授仓库权限**——除非要临时隔离某个仓库，否则全走 team。
 - **不把 `software` 加成 Admin**——Write 够用，Admin 只给 `codelab-admin`。
 - **不在 README 里写“谁负责什么”**——那是 CODEOWNERS 的活，README 只写怎么跑。
+- **不把审批线设成 `software`**——合并批准权只属于 `codelab-admin`。
 
 ## 下一步
 
