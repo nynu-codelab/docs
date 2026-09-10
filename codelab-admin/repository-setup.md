@@ -56,4 +56,4 @@ Settings → Branches → Add rule，针对 `main`：
 ## 下一步
 
 - 仓库命名与模板：[repository.md](repository.md)
-- PR 流程：[pull-request.md](pull-request.md)
+- PR 流程：[../software/github/pull-request.md](../software/github/pull-request.md)

@@ -47,5 +47,5 @@ CodeLab 组织下的仓库如何创建、命名和管理。
 ## 下一步
 
 - 新仓库权限配置：[repository-setup.md](repository-setup.md)
-- Issue 怎么写：[issue.md](issue.md)
-- PR 流程：[pull-request.md](pull-request.md)
+- Issue 怎么写：[../software/github/issue.md](../software/github/issue.md)
+- PR 流程：[../software/github/pull-request.md](../software/github/pull-request.md)
