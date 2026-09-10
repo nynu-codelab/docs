@@ -2,7 +2,7 @@
 
 新仓库创建后，按以下四步完成权限与保护配置。
 
-**总原则**：新仓库 = `software`(Write) + `codelab-admin`(Maintain) + CODEOWNERS（codelab-admin 审批线）+ main 分支保护，四件事齐了就能跑。
+**总原则**：新仓库 = `software`(Write) + `codelab-admin`(Admin) + CODEOWNERS（codelab-admin 审批线）+ main 分支保护 + 安全开关，五件事齐了才能对外开放协作。
 
 ## 前置：创建仓库
 
@@ -15,7 +15,7 @@ Settings → Collaborators and teams：
 | Team | 权限 | 说明 |
 | --- | --- | --- |
 | `@nynu-codelab/software` | Write | 全体研发默认推分支、开 PR |
-| `@nynu-codelab/codelab-admin` | Maintain | 分支保护、权限、仓库设置 |
+| `@nynu-codelab/codelab-admin` | Admin | 分支保护、规则集、权限与安全开关（Maintain 不足以管理这些设置） |
 
 普通代码仓库**不要**加 `achievement`；只有论文 / 竞赛 / 成果材料类仓库才加它。
 
@@ -43,12 +43,25 @@ Settings → Branches → Add rule，针对 `main`：
 
 `develop` 照抄一份（长期迭代项目）。
 
-## 4. 不要做的事
+## 4. 安全开关
+
+Settings → Code security and analysis，确认全部开启：
+
+- ☑ Secret scanning（密钥扫描）
+- ☑ Push protection（推送保护）
+- ☑ Dependabot alerts（依赖漏洞告警）
+- ☑ Dependabot security updates（安全更新 PR）
+
+新仓库默认可能关闭这些开关，必须手动确认，不要假设它们继承组织设置。
+
+## 5. 不要做的事
 
 - **不直接给个人授仓库权限**——除非要临时隔离某个仓库，否则全走 team。
 - **不把 `software` 加成 Admin**——Write 够用，Admin 只给 `codelab-admin`。
 - **不在 README 里写“谁负责什么”**——那是 CODEOWNERS 的活，README 只写怎么跑。
 - **不把审批线设成 `software`**——合并批准权只属于 `codelab-admin`。
+- **不要只依赖规则集或只依赖经典分支保护**——两者并存时要分别核对；组织级规则集管默认分支，仓库级只叠加必需状态检查。
+- **不要配一个永远跑不出来的必需状态检查**——检查名必须来自仓库里真实存在的 workflow，否则 PR 永远无法合并。
 
 ## 下一步
 
