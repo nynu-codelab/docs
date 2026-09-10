@@ -1,6 +1,6 @@
 # codelab-admin：项目维护
 
-面向 codelab-admin（维护者），回答“怎么建仓库、怎么管权限、怎么保证安全、怎么交接”。
+面向 `nynu-codelab` 组织中 **codelab-admin** team（组织维护者，Maintain 权限），回答"怎么建仓库、怎么管权限、怎么保证安全、怎么交接"。
 
 | 文档 | 内容 |
 | --- | --- |
