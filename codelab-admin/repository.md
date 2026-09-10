@@ -12,7 +12,9 @@ CodeLab 组织下的仓库如何创建、命名和管理。
 
 组织不维护"复制即用"的项目模板：模板会和真实项目脱节，改一次规范就得同步改一遍模板，也容易让人以为"套了模板就等于合规"。规范靠 CI 检查，不靠复制。
 
-1. 由项目负责人或 `codelab-admin` 在组织中创建仓库，归属选 `nynu-codelab`，默认选 **Private**
+组织已关闭成员自助建仓（Members can create repositories = off），仓库统一由组织所有者创建。
+
+1. 由组织所有者（`codelab-admin` 成员）在组织中创建仓库，归属选 `nynu-codelab`，默认选 **Private**
 2. 按下面的命名规则命名，并在 `/main` 前先配好保护规则
 3. 搭最小骨架：`README.md`（怎么跑）、`.gitignore`、`.env.example`
 4. 在 Actions 页面用组织工作流模板添加标准检查（`.github` 仓库的 `workflow-templates/`），再按技术栈补充 lint / test / build
@@ -53,7 +55,11 @@ CodeLab 组织下的仓库如何创建、命名和管理。
 
 ## 规则集与分支保护
 
-组织级规则集对所有仓库的默认分支生效，新仓库自动继承，无需逐个配置。仓库级规则集只用来叠加该仓库特有的必需状态检查。详见 [repository-setup.md](repository-setup.md)。
+组织当前是免费计划，**不支持组织级规则集**（组织级规则集是 GitHub Team 功能），所以每个新仓库都要单独配置规则集和分支保护。这就是 [repository-setup.md](repository-setup.md) 必须逐步执行的原因——不要假设新仓库会自动继承保护。
+
+配置完成后，`main` 的行为是：不能删除、不能强推、必须走 PR、至少 1 位 `codelab-admin` 批准、必需状态检查通过。
+
+> 升级到 GitHub Team 后，应把公共规则抽成组织级规则集，仓库级只保留该仓库特有的必需状态检查，避免每个新仓库重复配置。
 
 ## 下一步
 

@@ -33,6 +33,8 @@ Settings → Collaborators and teams：
 
 ## 3. 分支保护
 
+组织是免费计划，没有组织级规则集，因此这一步每个仓库都必须做，没有"新仓库自动继承"这回事。
+
 Settings → Branches → Add rule，针对 `main`：
 
 - ☑ Require a pull request before merging
