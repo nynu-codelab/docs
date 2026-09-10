@@ -19,7 +19,7 @@ Code Review
 ## 创建 PR
 
 1. Push 你的分支后，GitHub 会自动提示 Create Pull Request
-2. `base` 选 `develop`（或项目约定的分支），`compare` 选你的分支
+2. `base` 选目标分支：项目有 `develop` 时选 `develop`，否则选 `main`（以仓库 README 的约定为准）；`compare` 选你的分支
 3. 标题遵循 [Commit 规范](../git/commit-convention.md)：`feat(auth): add login page`
 4. 按 [PULL_REQUEST_TEMPLATE](https://github.com/nynu-codelab/.github/blob/main/PULL_REQUEST_TEMPLATE.md) 填写
 5. 关联 Issue：描述中写 `Closes #12`

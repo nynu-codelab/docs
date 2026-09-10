@@ -1,0 +1,12 @@
+config:
+  MD013: false # 不限制行长度
+  MD024: false # 允许重复小标题
+  MD033: false # 允许内联 HTML
+  MD034: false # 允许裸 URL
+  MD041: false # 不要求首行为一级标题
+
+globs:
+  - "**/*.md"
+
+ignores:
+  - "LICENSE"
