@@ -14,7 +14,7 @@
 
 ## 本仓库不包含什么
 
-本仓库只维护**协作规范**，不放技术栈教程。Docker、CI/CD、AI / Agent、算法与硬件方向的资料在飞书知识库维护，可运行的工程起点见 [templates](https://github.com/nynu-codelab/templates)。需要新增教程类内容时，先确认它属于「协作规范」还是「知识库」，不要直接往本仓库堆。
+本仓库只维护**协作规范**，不放技术栈教程，也不放项目模板。Docker、CI/CD、AI / Agent、算法与硬件方向的资料在飞书知识库维护；新项目按 [codelab-admin/repository.md](codelab-admin/repository.md) 从零搭建，规范一致性由 CI 检查保证。需要新增教程类内容时，先确认它属于「协作规范」还是「知识库」，不要直接往本仓库堆。
 
 ## 我是 codelab-admin → 项目维护
 

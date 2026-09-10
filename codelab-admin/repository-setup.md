@@ -6,7 +6,7 @@
 
 ## 前置：创建仓库
 
-见 [repository.md](repository.md)：从 templates 模板创建，归属 `nynu-codelab`，默认选 **Private**。
+见 [repository.md](repository.md)：由项目负责人或 `codelab-admin` 在组织中创建，归属 `nynu-codelab`，默认选 **Private**。组织不提供项目模板，骨架按规范手工搭。
 
 ## 1. 加 team 权限
 
@@ -65,5 +65,5 @@ Settings → Code security and analysis，确认全部开启：
 
 ## 下一步
 
-- 仓库命名与模板：[repository.md](repository.md)
+- 仓库命名与创建：[repository.md](repository.md)
 - PR 流程：[../software/github/pull-request.md](../software/github/pull-request.md)

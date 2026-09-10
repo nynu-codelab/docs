@@ -10,12 +10,15 @@ CodeLab 组织下的仓库如何创建、命名和管理。
 
 ## 创建新仓库
 
-1. 在 [templates](https://github.com/nynu-codelab/templates) 找到对应模板
-2. 使用 **Use this template** 创建新仓库（自动继承 README、.gitignore、CI 等）
-3. 仓库归属选择 `nynu-codelab`
-4. 由项目负责人或 `codelab-admin` 创建，并按 [repository-setup.md](repository-setup.md) 配置权限
+组织不维护"复制即用"的项目模板：模板会和真实项目脱节，改一次规范就得同步改一遍模板，也容易让人以为"套了模板就等于合规"。规范靠 CI 检查，不靠复制。
 
-> 不要从零 `git init` 搭建：模板已经内置统一规范。
+1. 由项目负责人或 `codelab-admin` 在组织中创建仓库，归属选 `nynu-codelab`，默认选 **Private**
+2. 按下面的命名规则命名，并在 `/main` 前先配好保护规则
+3. 搭最小骨架：`README.md`（怎么跑）、`.gitignore`、`.env.example`
+4. 在 Actions 页面用组织工作流模板添加标准检查（`.github` 仓库的 `workflow-templates/`），再按技术栈补充 lint / test / build
+5. 按 [repository-setup.md](repository-setup.md) 完成 team 权限、CODEOWNERS、分支保护与安全开关
+
+> 顺序很重要：先配保护规则和 CI，再有第一个 commit。反过来做，第一个 PR 就会踩到"检查名不存在"或"没人能批准"这类坑。
 
 ## 每个仓库必须包含
 
@@ -23,13 +26,13 @@ CodeLab 组织下的仓库如何创建、命名和管理。
 - `.gitignore`：忽略 IDE 配置、`.env`、构建产物
 - `.env.example`：环境变量示例（不填真实值）
 - `LICENSE`：按项目类型决定（公共项目 MIT，含纯文档仓库；竞赛 / 企业 / 成果项目先不加）
-- CI 配置（`templates` 已内置）
+- CI 配置：至少包含组织标准检查（Markdown Lint、PR 标题），再按技术栈补 lint / test / build
 
 每一项都按仓库实际情况核对，缺项在 PR 里说明原因，不要默默省略。
 
 ## 可见性
 
-- 公共仓库：面向开源的学习项目、模板、文档
+- 公共仓库：面向开源的学习项目、文档
 - 私有仓库：竞赛项目、企业合作、未公开成果
 
 拿不准就问项目负责人。
