@@ -30,38 +30,20 @@
 
 ## 新成员第一步
 
-1. 配好 Git 身份 —— [Git 概述](software/git/overview.md)
-2. 找一个 `good first issue` 认领 —— [Issue 规范](software/github/issue.md)
-3. 建规范分支、按约定写 Commit —— [分支模型](software/git/branching.md) · [Commit 规范](software/git/commit-convention.md)
-4. 提 PR 并等待 CI 与 Review —— [PR 流程](software/github/pull-request.md) · [Code Review](software/github/code-review.md)
+1. 配好 Git 身份 —— [Git 概述](software/README.md#git-概述)
+2. 找一个 `good first issue` 认领 —— [Issue 规范](software/README.md#issue-规范)
+3. 建规范分支、按约定写 Commit —— [分支模型](software/README.md#分支模型) · [Commit 规范](software/README.md#commit-规范)
+4. 提 PR 并等待 CI 与 Review —— [PR 流程](software/README.md#pull-request-规范) · [Code Review](software/README.md#code-review)
 5. 全组织通用的最低协作要求见 [CONTRIBUTING.md](https://github.com/nynu-codelab/.github/blob/main/CONTRIBUTING.md)
 
 ## 文档地图
 
-### software —— 研发怎么协作
+规范只维护两份文档，每份开头带目录，可按锚点直达：
 
 | 文档 | 内容 |
 | --- | --- |
-| [Git 概述](software/git/overview.md) / [分支模型](software/git/branching.md) / [Commit 规范](software/git/commit-convention.md) | 日常 Git |
-| [Issue 规范](software/github/issue.md) | 怎么写 Issue、怎么认领任务 |
-| [PR 流程](software/github/pull-request.md) | 怎么提 PR |
-| [Code Review](software/github/code-review.md) | 怎么审、怎么被审 |
-| [工程流程总览](software/engineering/overview.md) | 需求 → 发布全流程 |
-| [技术方案与 ADR](software/engineering/technical-design.md) | 什么时候必须写设计文档 |
-| [测试与提测](software/engineering/testing.md) | 测试层次与提测准入 |
-| [发布与回滚](software/engineering/release.md) | 版本、发布、回滚 |
-| [技术文档规范](software/engineering/documentation.md) | README、设计文档怎么写 |
-
-### codelab-admin —— 项目怎么维护
-
-| 文档 | 内容 |
-| --- | --- |
-| [新仓库配置](codelab-admin/repository-setup.md) | 加 team、CODEOWNERS、分支保护、安全开关四步 |
-| [仓库命名与权限模型](codelab-admin/repository.md) | 三 team 模型、可见性、默认分支保护 |
-| [工程安全基线](codelab-admin/security.md) | 密钥、CI、依赖安全；泄露事件响应 |
-| [项目与技术资产交接](codelab-admin/handover.md) | 人员变动时仓库、权限、密钥怎么交 |
-
-各目录下的 `README.md` 是该目录更细的索引。
+| [software/README.md](software/README.md) | [Git 概述](software/README.md#git-概述) · [分支模型](software/README.md#分支模型) · [Commit 规范](software/README.md#commit-规范) · [Issue](software/README.md#issue-规范) · [PR](software/README.md#pull-request-规范) · [Code Review](software/README.md#code-review) · [工程流程总览](software/README.md#工程流程总览) · [技术方案与 ADR](software/README.md#技术方案与-adr) · [测试与提测](software/README.md#测试与提测) · [发布与回滚](software/README.md#发布与回滚) · [技术文档规范](software/README.md#技术文档规范) |
+| [codelab-admin/README.md](codelab-admin/README.md) | [新仓库配置](codelab-admin/README.md#新仓库配置) · [仓库命名与权限模型](codelab-admin/README.md#仓库命名与权限模型) · [工程安全基线](codelab-admin/README.md#工程安全基线) · [项目与技术资产交接](codelab-admin/README.md#项目与技术资产交接) |
 
 ## 本仓库不包含什么
 
@@ -79,7 +61,7 @@
 2. PR 标题遵循 Conventional Commits，例如 `docs: 重构根 README`、`docs(github): 补充 PR 模板说明`。
 3. 两个必需状态检查必须通过：**Markdown Lint** 与 **Check PR Title**，配置见 [standards.yml](.github/workflows/standards.yml)。
 4. 合并需 `codelab-admin` 以 Code Owner 身份批准 —— 见 [CODEOWNERS](CODEOWNERS)。
-5. 新增或移动文档时，同步更新所在目录 `README.md` 的索引。
+5. 改规范内容直接编辑 [software/README.md](software/README.md) 或 [codelab-admin/README.md](codelab-admin/README.md)；新增章节时同步更新该文档开头的目录。
 
 ## 相关仓库与组织级文件
 
