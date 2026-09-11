@@ -63,14 +63,6 @@
 4. 合并需 `codelab-admin` 以 Code Owner 身份批准 —— 见 [CODEOWNERS](CODEOWNERS)。
 5. 改规范内容直接编辑 [software/README.md](software/README.md) 或 [codelab-admin/README.md](codelab-admin/README.md)；新增章节时同步更新该文档开头的目录。
 
-## 相关仓库与组织级文件
-
-| 位置 | 内容 |
-| --- | --- |
-| [`nynu-codelab/.github`](https://github.com/nynu-codelab/.github) | 组织级配置：Issue / PR 模板、[SECURITY.md](https://github.com/nynu-codelab/.github/blob/main/SECURITY.md)、[CODE_OF_CONDUCT.md](https://github.com/nynu-codelab/.github/blob/main/CODE_OF_CONDUCT.md)、[SUPPORT.md](https://github.com/nynu-codelab/.github/blob/main/SUPPORT.md) |
-| [`codelab-web`](https://github.com/nynu-codelab/codelab-web) | 实验室官网与招新管理系统 |
-| [`lab-member-system-docs`](https://github.com/nynu-codelab/lab-member-system-docs) | 新成员上手项目说明 |
-
 ## License
 
 [MIT](LICENSE)
